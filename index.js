@@ -142,4 +142,4 @@ setInterval(function(){
         let socket=Sockets[i];
         socket.emit('updateMap',Objects);
     }
-},10);
+},50);
