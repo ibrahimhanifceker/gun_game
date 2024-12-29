@@ -13,7 +13,7 @@ console.log('Server Started');
 
 var Sockets={};
 var Objects={};
-var bullet_speed=50,player_speed=15;
+var bullet_speed=10,player_speed=3;
 
 var io = require('socket.io')(serv,{});
 
@@ -142,4 +142,4 @@ setInterval(function(){
         let socket=Sockets[i];
         socket.emit('updateMap',Objects);
     }
-},50);
+},10);
