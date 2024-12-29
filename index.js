@@ -104,39 +104,6 @@ setInterval(function(){
         }
     }
     for(let i in Objects){
-        for(let j in Objects){
-            let object=Objects[i];
-            let object2=Objects[j];
-            let del=false;
-            if(object.type=='bullet' && object2.type=='player'){
-                let x=object.x+5*Math.sin(object.angle);
-                let y=object.y+5*Math.cos(object.angle);
-                if(Math.sqrt((x-object2.x)**2+(y-object2.y)**2)<=30){
-                    del=true;
-                }
-                x=object.x-5*Math.sin(object.angle);
-                y=object.y-5*Math.cos(object.angle);
-                if(Math.sqrt((x-object2.x)**2+(y-object2.y)**2)<=30){
-                    del=true;
-                }
-                x=object.x+15*Math.cos(object.angle)+5*Math.sin(object.angle);
-                y=object.y-15*Math.sin(object.angle)+5*Math.cos(object.angle);
-                if(Math.sqrt((x-object2.x)**2+(y-object2.y)**2)<=30){
-                    del=true;
-                }
-                x=object.x+15*Math.cos(object.angle)-5*Math.sin(object.angle);
-                y=object.y-15*Math.sin(object.angle)-5*Math.cos(object.angle);
-                if(Math.sqrt((x-object2.x)**2+(y-object2.y)**2)<=30){
-                    del=true;
-                }
-            }
-            if(del){
-                //delete Sockets[j];
-                delete Objects[j];
-            }
-        }
-    }
-    for(let i in Objects){
         let object=Objects[i];
         if(object.type=='bullet'){
             object.x+=bullet_speed*Math.cos(object.angle);
