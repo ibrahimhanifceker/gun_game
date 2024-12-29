@@ -13,7 +13,7 @@ console.log('Server Started');
 
 var Sockets={};
 var Objects={};
-var bullet_speed=10,player_speed=3;
+var bullet_speed=50,player_speed=15;
 
 var io = require('socket.io')(serv,{});
 
